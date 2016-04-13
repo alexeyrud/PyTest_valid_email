@@ -1,15 +1,14 @@
+"""
+Написать функцию, которая принимает имя файла, открывает файл (предполагается, что это html),
+заменяет все email адреса на user@example.com и сохраняет результат в файл, с таким же именем, как исходный,
+но с добавлением суффикса '.processed'
+"""
 import re
 
-
 # ======= start function for replacing e-mail =========
-
 def repl_email(input_file):
-    """
-    Написать функцию, которая принимает имя файла, открывает файл (предполагается, что это html),
-    заменяет все email адреса на user@example.com и сохраняет результат в файл, с таким же именем, как исходный,
-    но с добавлением суффикса '.processed'
-    """
     output_file = input_file + '.processed'
+
     """
     Регулярное выражение валидации e-mail взято из jango
     https://github.com/django/django/blob/master/django/core/validators.py
@@ -45,7 +44,6 @@ def repl_email(input_file):
 # =========== main ==================================
 
 INPUT_FILE = 'inp.htm'
-
 repl_email(INPUT_FILE)
 
 # ======== end main =================================
